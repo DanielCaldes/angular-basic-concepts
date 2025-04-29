@@ -1,0 +1,22 @@
+div{
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+}
+table{
+    width: 90%;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }

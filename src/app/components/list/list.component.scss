@@ -1,0 +1,24 @@
+.add-item{
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    width: 90%;
+}
+.item span{
+    min-width: 100px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(114, 114, 114);
+}
