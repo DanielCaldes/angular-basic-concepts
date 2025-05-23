@@ -1,6 +1,8 @@
 # Angular Basic Concepts
 
-Este proyecto es una demostración práctica de conceptos básicos de Angular. Se desarrolla desde cero utilizando el Angular CLI, sin enrutamiento y con SCSS como preprocesador de estilos.
+Este proyecto es una demostración práctica de conceptos básicos de Angular. Se desarrolla desde cero utilizando Angular CLI, sin enrutamiento y con SCSS como preprocesador de estilos.
+
+He incluido el uso de ``Angular Material`` para añadir iconos a los botones, junto con tooltips que muestran su funcionalidad. Además, he utilizado el pipe ``date`` con el formato ``'dd/MM/yyyy'`` para dar formato a las fechas en el formulario.
 
 Desplegado en GitHub Pages: https://danielcaldes.github.io/angular-basic-concepts/
 
