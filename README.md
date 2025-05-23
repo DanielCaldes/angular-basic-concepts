@@ -1,27 +1,60 @@
-# Basic Concepts
+# Angular Basic Concepts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
+Este proyecto es una demostración práctica de conceptos básicos de Angular. Se desarrolla desde cero utilizando el Angular CLI, sin enrutamiento y con SCSS como preprocesador de estilos.
 
-## Development server
+Desarrollado por DanielCaldes — desplegado en GitHub Pages: https://danielcaldes.github.io/angular-basic-concepts/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologías usadas
+- Angular
+- SCSS
+- TypeScript
+- GitHub Pages para despliegue
 
-## Code scaffolding
+## Cómo ejecutar localmente
+git clone https://github.com/DanielCaldes/angular-basic-concepts.git
+cd angular-basic-concepts
+npm install
+ng serve
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Accede a la app en http://localhost:4200
 
-## Build
+Cómo desplegar en GitHub Pages
+ng build --base-href "https://danielcaldes.github.io/angular-basic-concepts/"
+npx angular-cli-ghpages --dir=dist/angular-basic-concepts/browser
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Descripción del proyecto
 
-## Running unit tests
+1. Componente: Lista de elementos (ListComponent)
+- Permite agregar elementos a una lista.
+- Cada elemento puede ser eliminado individualmente.
+- Usa eventos y *ngFor para renderizar dinámicamente la lista.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Componente: Contador (CounterComponent)
+- Muestra un valor numérico que puede:
+  - Incrementarse
+  - Decrementarse (sin bajar de 0)
+  - Reiniciarse a 0
+- Utiliza @Input/@Output y manejo de estado interno.
 
-## Running end-to-end tests
+3. Componente: Formulario de usuario (UserFormComponent)
+- Formulario que recoge:
+  - Nombre
+  - Apellido
+  - Teléfono
+  - Fecha de nacimiento
+- Al enviar el formulario, los datos se muestran en una tabla HTML.
+- Valida que todos los campos sean completados antes de agregar.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Componente principal (AppComponent)
+- Integra los 3 componentes anteriores y los organiza en secciones.
+- Estilizado con SCSS para una mejor presentación visual.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Estructura del proyecto
+📁 src/
+├── 📁 app/
+│   ├── 📄 counter/
+│   ├── 📄 list/
+│   ├── 📄 user-form/
+│   └── 📄 app.component.ts
+├── 📁 assets/
+└── 📄 styles.scss
