@@ -2,7 +2,7 @@
 
 Este proyecto es una demostración práctica de conceptos básicos de Angular. Se desarrolla desde cero utilizando el Angular CLI, sin enrutamiento y con SCSS como preprocesador de estilos.
 
-Desarrollado por DanielCaldes — desplegado en GitHub Pages: https://danielcaldes.github.io/angular-basic-concepts/
+Desplegado en GitHub Pages: https://danielcaldes.github.io/angular-basic-concepts/
 
 ## Tecnologías usadas
 - Angular
@@ -11,32 +11,30 @@ Desarrollado por DanielCaldes — desplegado en GitHub Pages: https://danielcald
 - GitHub Pages para despliegue
 
 ## Cómo ejecutar localmente
-git clone https://github.com/DanielCaldes/angular-basic-concepts.git
-cd angular-basic-concepts
-npm install
-ng serve
-
-Accede a la app en http://localhost:4200
+1. ``git clone https://github.com/DanielCaldes/angular-basic-concepts.git``
+2. ``cd angular-basic-concepts``
+3. ``npm install``
+4. ``ng serve``
+5. Accede a la app en ``http://localhost:4200``
 
 Cómo desplegar en GitHub Pages
-ng build --base-href "https://danielcaldes.github.io/angular-basic-concepts/"
-npx angular-cli-ghpages --dir=dist/angular-basic-concepts/browser
+1. ``ng build --base-href "https://danielcaldes.github.io/angular-basic-concepts/"``
+2. ``npx angular-cli-ghpages --dir=dist/angular-basic-concepts/browser``
 
 ## Descripción del proyecto
 
-1. Componente: Lista de elementos (ListComponent)
+1. Componente: Lista de elementos (list)
 - Permite agregar elementos a una lista.
 - Cada elemento puede ser eliminado individualmente.
 - Usa eventos y *ngFor para renderizar dinámicamente la lista.
 
-2. Componente: Contador (CounterComponent)
+2. Componente: Contador (counter)
 - Muestra un valor numérico que puede:
   - Incrementarse
   - Decrementarse (sin bajar de 0)
   - Reiniciarse a 0
-- Utiliza @Input/@Output y manejo de estado interno.
 
-3. Componente: Formulario de usuario (UserFormComponent)
+3. Componente: Formulario de usuario (user-form)
 - Formulario que recoge:
   - Nombre
   - Apellido
@@ -50,11 +48,31 @@ npx angular-cli-ghpages --dir=dist/angular-basic-concepts/browser
 - Estilizado con SCSS para una mejor presentación visual.
 
 ## Estructura del proyecto
+```
 📁 src/
 ├── 📁 app/
-│   ├── 📄 counter/
-│   ├── 📄 list/
-│   ├── 📄 user-form/
+│   ├── 📁 components/
+│   │   ├── 📁 counter/
+│   │   │   ├── 📄 counter.component.html
+│   │   │   ├── 📄 counter.component.scss
+│   │   │   ├── 📄 counter.component.spec.ts
+│   │   │   └── 📄 counter.component.ts
+│   │   ├── 📁 list/
+│   │   │   ├── 📄 list.component.html
+│   │   │   ├── 📄 list.component.scss
+│   │   │   ├── 📄 list.component.spec.ts
+│   │   │   └── 📄 list.component.ts
+│   │   └── 📁 user-form/
+│   │       ├── 📄 user-form.component.html
+│   │       ├── 📄 user-form.component.scss
+│   │       ├── 📄 user-form.component.spec.ts
+│   │       └── 📄 user-form.component.ts
+│   ├── 📁 models/
+│   │   └── 📄 user.model.ts   //Modelo de datos para el formulario user-form
+│   ├── 📄 app.component.html
+│   ├── 📄 app.component.scss
+│   ├── 📄 app.component.spec.ts
 │   └── 📄 app.component.ts
 ├── 📁 assets/
 └── 📄 styles.scss
+```
