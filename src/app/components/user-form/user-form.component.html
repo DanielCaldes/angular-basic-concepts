@@ -32,18 +32,20 @@
     </form>
     
     <table>
-        <tr>
+        <thead>
+            <tr>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Teléfono</th>
             <th>Cumpleaños</th>
-        </tr>
+            </tr>
+        </thead>
         <tbody>
             <tr *ngFor="let user of users">
-                <td>{{ user.name }}</td>
-                <td>{{ user.surname }}</td>
-                <td>{{ user.phone }}</td>
-                <td>{{ user.birthdate | date:'dd/MM/yyyy' }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.surname }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.birthdate | date:'dd/MM/yyyy' }}</td>
             </tr>
         </tbody>
     </table>
